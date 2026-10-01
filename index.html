@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+    <title>Banana</title>
+</head>
+<body>    
+<!--Preloader-->
+<div class="preloader" id="preloader"></div>
+<!--Navigation-->
+    <div class="wrapper">
+    <nav class="nav" id="nav">
+        <input type="checkbox" id="check">
+        <label for="check">            
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+        </label>
+        <img src="Images/Logo.png" alt="Logo">
+        <ul>
+        <li>
+            <a href="#">
+                <i class="fas fa-home"></i>
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="#about">
+                <i class="fa-solid fa-address-card"></i>
+                About
+            </a>
+        </li>
+        <li>
+            <a href="#products-menu">
+                <i class="fa-solid fa-mobile"></i>
+                Products
+            </a>
+        </li>
+    </ul> 
+    </nav>       
+<!-- ---------------------------------- --> 
+<!-- Cookie -->
+        <div class="cookie-popup">
+            <img src="Images/Cookie.webp" class="cookie"></img>
+            <h3>Cookie Consent</h3>
+            <p>
+                By using this website you accept our <a target="_blank" href="T&C.html#Cookie">cookie policy.</a>
+            </p>
+            <button class="cookie-accept">OK</button>
+        </div>
+<!-- ---------------------------------- --> 
+<!-- Header -->
+        <header class="header">
+        <div class="homepage">
+            <div class="text-holder">
+            <div style="margin-top: 325px;" class="text">
+            <h1>Banana</h1>            
+            <hr class="header-line">
+            <b class="quote">Think Bigger!</b>
+            </div>
+            </div>
+        </div>        
+        </header>  
+<!-- ---------------------------------- -->       
+<!--About Us  -->
+    <div class="about" id="about">
+        <h2>About Us</h2>
+        <p class="about-text">
+            Welcome to Banana!<br>
+
+            Your trusted source for smart devices & accessories. <br>
+            
+            We're dedicated to providing you the very best of gadgets, with an emphasis on quality, speed & style. Our devices are designed to provide you a seamless usage experience. Our passion for technology defines as a young and innovative brand, always on the fore front of bring cutting edge solutions to market. <br>
+            
+            
+            We hope you enjoy our products as much as we enjoy offering them to you. <br>
+            
+            If you have any suggestion or comments on our offerings and solution, please don't hesitate to contact us. <br>
+            
+            
+            Sincerely, <br>
+            Team Banana
+        </p>
+    </div>
+<!-- Products -->
+        <div class="products-menu" id="products-menu">
+            <h2>Our Products:</h2>
+            <div class="products">
+                <div class="mobiles">
+                    <img width="440px" src="Images/Mobile-Intro.webp" alt="">
+                    <p class="product-caption">
+                        Mobiles
+                        <a target="_blank" href="Mobile.html"><button class="product-more">See More</button></a>
+                    </p>
+                </div>
+                <div class="products">
+                    <div class="accessories">
+                        <img width="410px" src="Images/Accessories-Intro.webp" alt="">
+                        <p class="product-caption">
+                            Accessories
+                            <a target="_blank" href="Accessories.html"><button class="product-more">See More</button></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>  
+<!-- ---------------------------------- -->          
+<!--Footer Navigation-->
+<div class="footer-nav">
+    <div class="footer-doc">
+        <p class="heading-footer">
+            Important Documents:
+        </p>
+        <ul class="footer-ul">
+            <a target="_blank" href="T&C.html#Cookies"><li>Cookies</li></a>
+            <a target="_blank" href="T&C.html#License"><li>License</li></a>
+            <a target="_blank" href="Privacy.html"><li>Privacy Policy</li></a>       
+            <a target="_blank" href="Contact.html"><li>Contact Us</li></a>                    
+        </ul>
+    </div>
+    <div class="footer-doc">
+        <p class="heading-footer">
+            Shop:
+        </p>
+        <ul class="footer-ul">
+            <a target="_blank" href="Mobile.html"><li>Smartphones</li></a>
+            <a target="_blank" href="Accessories.html"><li>Accessories</li></a>                     
+        </ul>
+    </div>            
+</div>
+<!-- ---------------------------------- -->  
+<hr class="footer-line" width="100%">
+<!--Footer-->
+<footer class="footer">Copyright: Banana&copy All rights reserved.</footer>
+<!-- ---------------------------------- -->
+<!-- Script -->
+<script>
+    // Preloader    
+    window.addEventListener('load', function(){
+    const preloader = document.querySelector('.preloader');
+    preloader.classList.add('preload-finish');
+    });    
+    // Cookie Popup
+    const cookieBox = document.querySelector(".cookie-popup")
+    acceptBtn = cookieBox.querySelector(".cookie-popup button")
+
+    acceptBtn.onclick = ()=>{
+        document.cookie = "Cookie=Banana; max-age="+60*60*24*30;
+            cookieBox.classList.add("hide");
+    }
+
+    let checkCookie = document.cookie.indexOf("Cookie=Banana");
+    checkCookie != -1 ? cookieBox.classList.add("hide"): cookieBox.classList.remove("hide")
+</script>
+<script src="https://kit.fontawesome.com/43edeb6065.js" crossorigin="anonymous"></script>
+<!-- ---------------------------------- -->
+</body>
+</html>
